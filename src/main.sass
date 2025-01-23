@@ -1,0 +1,53 @@
+@use "sass:math"
+@use "./global.sass" as *
+
+=grid-setup($min-width, $columns)
+  @media (min-width: #{$min-width}px)
+    $box-size: math.div($min-width, $columns)
+    grid-template-columns: repeat(#{$columns}, 1fr)
+
+main
+  width: 100%
+  max-width: 1200px
+  margin: auto
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  grid-column-gap: 1rem
+  grid-row-gap: 1rem
+  padding: 1rem
+  box-sizing: border-box
+  // Define column counts for different screen widths
+  +grid-setup(1, 1)
+  +grid-setup(401, 2)
+  +grid-setup(801, 3)
+  +grid-setup(1201, 4)
+
+  section 
+    
+    article
+      aspect-ratio: 1 / 1
+      background: gray
+      border-radius: $article-radius
+    
+    h2
+      margin: 0
+      padding: 1rem
+      background: white
+      border-radius: 3px
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+      text-align: center
+      font-size: 1.5rem
+      color: #333
+      font-weight: 400
+      line-height: 1.2
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      position: relative
+      z-index: 1
+      transition: transform 0.2s ease-in-out
+      cursor: pointer
+      transform: scale(.95)
+
+      &:hover
+        transform: scale(1.0)

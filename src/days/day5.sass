@@ -1,0 +1,175 @@
+#day5 article
+  background-color: #f5f5f5
+  background-image: linear-gradient(45deg, #77a15f, #6c639e)
+  display: flex
+  justify-content: center
+  align-items: center
+
+  #main
+    width: 80%
+    height: 60%
+    background-color: white
+    
+    * 
+      box-sizing: border-box
+
+    #header
+      width: 100%
+      height: 30%
+      background-color: #77a15f
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr
+      grid-template-areas: "title revenue" "date amount"
+      padding: .25rem
+
+
+
+      span
+        font-size: .5em
+        color: white
+
+      span:nth-child(1)
+        grid-area: title
+        font-weight: bold
+
+      span:nth-child(2)
+        grid-area: date
+
+      span:nth-child(3)
+        grid-area: revenue 
+        justify-self: end
+
+      span:nth-child(4)
+        grid-area: amount
+        justify-self: end
+
+    #content
+      width: 100%
+      height: 70%
+      background-color: #6c639e
+      padding: .25rem
+
+      #legend
+        height: 20%
+        width: 100%
+        font-size: .5em
+        display: flex
+        justify-content: flex-end
+        align-items: center
+
+        div
+          margin-left: .5rem
+          span:nth-child(1)
+            background-color: #77a15f
+            width: .5rem
+            height: .5rem
+            border-radius: 50%
+            display: inline-block
+            margin-right: .25em
+
+        div:nth-child(2)
+          span:nth-child(1)
+            background-color: black
+
+        
+
+      #chart
+        height: 60%
+        width: 100%
+        position: relative
+
+
+        .graph-line
+          height: 1px
+          width: 100%
+          display: inline-block
+          background-color: gray
+          position: absolute
+
+          &:nth-of-type(1)
+            top: 0%
+
+          &:nth-of-type(2)
+            top: 50%
+
+          &:nth-of-type(3)
+            top: 100%
+
+        .dot
+          height: 5px
+          width: 5px
+          border-radius: 50%
+          position: absolute
+          transform: translate(-50%, 50%)
+          cursor: pointer
+
+
+          &>div
+            opacity: 0
+            font-size: .5em
+            transform: translate(2.5px, calc(-100% - 2.5px))
+            background-color: inherit
+            display: inline-block
+            padding: .25rem
+          
+          &:hover>div
+            opacity: 1
+
+
+        .views
+          background-color: #77a15f
+
+
+        #view1
+          left: calc(100% / 14 * 1)
+        #view2
+          left: calc(100% / 14 * 3)
+        #view3
+          left: calc(100% / 14 * 5)
+        #view4
+          left: calc(100% / 14 * 7)
+        #view5
+          left: calc(100% / 14 * 9)
+        #view6
+          left: calc(100% / 14 * 11)
+        #view7
+          left: calc(100% / 14 * 13)
+            
+          
+        .clicks
+          background-color: black
+
+
+        #click1
+          left: calc(100% / 14 * 1)
+        #click2
+          left: calc(100% / 14 * 3)
+        #click3
+          left: calc(100% / 14 * 5)
+        #click4
+          left: calc(100% / 14 * 7)
+        #click5
+          left: calc(100% / 14 * 9)
+        #click6
+          left: calc(100% / 14 * 11)
+        #click7
+          left: calc(100% / 14 * 13)
+
+        svg
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+
+
+      #axis
+        height: 20%
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-size: .5em
+        text-align: center
+

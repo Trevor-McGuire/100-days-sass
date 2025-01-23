@@ -1,0 +1,110 @@
+#day4 article
+  background-image: linear-gradient(45deg, #77a15f, #6c639e)
+  color: white
+  position: relative
+  $animation-duration: 5s
+
+  div
+    background-color: white
+    border-radius: 100px
+    background-image: radial-gradient(circle, red 0%, blue 100%)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  
+  div:nth-of-type(1)
+    animation: grow1 $animation-duration linear infinite 
+    background-color: #77a15f
+
+  div:nth-of-type(2)
+    animation: grow2 $animation-duration linear infinite 
+    background-color: #6c639e
+
+  div:nth-of-type(3)
+    animation: grow3 $animation-duration linear infinite
+    background-color: #77a15f
+
+$grow1StartGrow: 20%
+$grow1EndGrow: 30%
+$grow1StartShrink: 80%
+$grow1EndShrink: 90%
+$grow1MaxSize: 60%
+
+$grow2StartGrow: 30%
+$grow2EndGrow: 40%
+$grow2StartShrink: 70%
+$grow2EndShrink: 80%
+$grow2MaxSize: 45%
+
+$grow3StartGrow: 40%
+$grow3EndGrow: 50%
+$grow3StartShrink: 60%
+$grow3EndShrink: 70%
+$grow3MaxSize: 30%
+
+@keyframes grow1
+  0%
+    width: 0%
+    height: 0%
+
+  #{$grow1StartGrow} 
+    width: 0%
+    height: 0%
+
+  #{$grow1EndGrow}
+    width: $grow1MaxSize
+    height: $grow1MaxSize
+  #{$grow1StartShrink}
+    width: $grow1MaxSize
+    height: $grow1MaxSize
+  #{$grow1EndShrink}
+    width: 0%
+    height: 0%
+  100%
+    width: 0%
+    height: 0%
+
+@keyframes grow2
+  0%
+    width: 0%
+    height: 0%
+
+  #{$grow2StartGrow} 
+    width: 0%
+    height: 0%
+
+  #{$grow2EndGrow}
+    width: $grow2MaxSize
+    height: $grow2MaxSize
+  #{$grow2StartShrink}
+    width: $grow2MaxSize
+    height: $grow2MaxSize
+  #{$grow2EndShrink}
+    width: 0%
+    height: 0%
+  100%
+    width: 0%
+    height: 0%
+
+@keyframes grow3
+  0%
+    width: 0%
+    height: 0%
+
+  #{$grow3StartGrow} 
+    width: 0%
+    height: 0%
+
+  #{$grow3EndGrow}
+    width: $grow3MaxSize
+    height: $grow3MaxSize
+  #{$grow3StartShrink}
+    width: $grow3MaxSize
+    height: $grow3MaxSize
+  #{$grow3EndShrink}
+    width: 0%
+    height: 0%
+  100%
+    width: 0%
+    height: 0%

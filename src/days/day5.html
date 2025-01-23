@@ -1,0 +1,116 @@
+<article>
+  <div id="main">
+    <div id="header">
+      <span>WEEKLY REPORT</span>
+      <span id="weekOfYear"></span>
+      <span>Revenue</span>
+      <span>$3621.79</span>
+    </div>
+    <div id="content">
+      <div id="legend">
+        <div>
+          <span></span>
+          <span>Views</span>
+        </div>
+        <div>
+          <span></span>
+          <span>Clicks</span>
+        </div>
+      </div>
+      <div id="chart">
+        <span className="graph-line"></span>
+        <span className="graph-line"></span>
+        <span className="graph-line"></span>
+        <span className="dot views" id="view2"><div></div></span>
+        <span className="dot views" id="view1"><div></div></span>
+        <span className="dot views" id="view3"><div></div></span>
+        <span className="dot views" id="view4"><div></div></span>
+        <span className="dot views" id="view5"><div></div></span>
+        <span className="dot views" id="view6"><div></div></span>
+        <span className="dot views" id="view7"><div></div></span>
+        <span className="dot clicks" id="click1"><div></div></span>
+        <span className="dot clicks" id="click2"><div></div></span>
+        <span className="dot clicks" id="click3"><div></div></span>
+        <span className="dot clicks" id="click4"><div></div></span>
+        <span className="dot clicks" id="click5"><div></div></span>
+        <span className="dot clicks" id="click6"><div></div></span>
+        <span className="dot clicks" id="click7"><div></div></span>
+         <svg id="views"></svg> <svg id="clicks"></svg> 
+      </div>
+      <div id="axis">
+        <span>MON</span>
+        <span>TUE</span>
+        <span>WED</span>
+        <span>THU</span>
+        <span>FRI</span>
+        <span>SAT</span>
+        <span>SUN</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    function getISOWeek(date) {
+      const startOfYear = new Date(date.getFullYear(), 0, 1);
+      const days = Math.floor((date - startOfYear) / (24 * 60 * 60 * 1000));
+      const startOfWeek = startOfYear;
+
+      if (startOfWeek.getDay() !== 4) {
+        // Move to the first Thursday of the year
+        startOfWeek.setDate(1 + ((4 - startOfWeek.getDay() + 7) % 7));
+      }
+
+      const weekNumber = Math.floor((days + startOfWeek.getDay()) / 7) + 1;
+      return weekNumber;
+    }
+
+    const now = new Date();
+    const year = now.getFullYear();
+    const weekNumber = getISOWeek(now);
+
+    function clickAndViewHeightRandomizer() {
+      const views = Math.floor(Math.random() * 1000 + 10);
+      const conversion = 0.1 * Math.random();
+      const clicks = Math.floor(views * conversion);
+
+      const logViews = Math.log(views + 1); // Adding 1 to avoid Math.log(0)
+      const logClicks = Math.log(clicks + 1);
+
+      const viewHeight = (100 * logViews) / Math.log(1001); // log(1001) is the maximum value for views
+      const clickHeight = (100 * logClicks) / Math.log(1001);
+
+      return [views, clicks, viewHeight, clickHeight];
+    }
+
+    const [views1, clicks1, viewHeight1, clickHeight1] =
+      clickAndViewHeightRandomizer();
+    const [views2, clicks2, viewHeight2, clickHeight2] =
+      clickAndViewHeightRandomizer();
+    const [views3, clicks3, viewHeight3, clickHeight3] =
+      clickAndViewHeightRandomizer();
+    const [views4, clicks4, viewHeight4, clickHeight4] =
+      clickAndViewHeightRandomizer();
+    const [views5, clicks5, viewHeight5, clickHeight5] =
+      clickAndViewHeightRandomizer();
+    const [views6, clicks6, viewHeight6, clickHeight6] =
+      clickAndViewHeightRandomizer();
+    const [views7, clicks7, viewHeight7, clickHeight7] =
+      clickAndViewHeightRandomizer();
+
+      document.getElementById("weekOfYear").innerText = `Week ${weekNumber} of ${year}`;
+      document.getElementById("view1").style.height = `${viewHeight1}%`;
+      document.getElementById("view2").style.height = `${viewHeight2}%`;
+      document.getElementById("view3").style.height = `${viewHeight3}%`;
+      document.getElementById("view4").style.height = `${viewHeight4}%`;
+      document.getElementById("view5").style.height = `${viewHeight5}%`;
+      document.getElementById("view6").style.height = `${viewHeight6}%`;
+      document.getElementById("view7").style.height = `${viewHeight7}%`;
+      document.getElementById("click1").style.height = `${clickHeight1}%`;
+      document.getElementById("click2").style.height = `${clickHeight2}%`;
+      document.getElementById("click3").style.height = `${clickHeight3}%`;
+      document.getElementById("click4").style.height = `${clickHeight4}%`;
+      document.getElementById("click5").style.height = `${clickHeight5}%`;
+      document.getElementById("click6").style.height = `${clickHeight6}%`;
+      document.getElementById("click7").style.height = `${clickHeight7}%`;
+
+  </script>
+</article>

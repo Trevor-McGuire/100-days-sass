@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://raw.githubusercontent.com/sass/sass-site/master/source/assets/img/logos/logo.svg"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100 Days SASS</title>
+    <style>footer {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+footer p {
+  margin: 0;
+  color: #666;
+}header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+header h1 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  color: #333;
+}
+header p {
+  margin: 0;
+  color: #666;
+}body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+@media (min-width: 1px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 401px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 801px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1201px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+main section article {
+  aspect-ratio: 1/1;
+  background: gray;
+  border-radius: 10px;
+}
+main section h2 {
+  margin: 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  transform: scale(0.95);
+}
+main section h2:hover {
+  transform: scale(1);
+}#day1 article {
+  background-image: linear-gradient(90deg, #6c639e, #77a15f);
+  color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#day1 article > :nth-child(1) {
+  font-size: 5rem;
+  line-height: 5rem;
+}
+#day1 article > :nth-child(2) {
+  font-size: 3.3rem;
+  line-height: 3.3rem;
+}
+#day1 article > :nth-child(3) {
+  font-size: 1rem;
+  line-height: 1rem;
+}#day2 article {
+  background-image: linear-gradient(45deg, #77a15f, #6c639e);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#day2 article input {
+  display: none;
+}
+#day2 article input:checked ~ label {
+  background-image: linear-gradient(45deg, #77a15f, #6c639e);
+}
+#day2 article input:checked ~ label:hover {
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.75)) brightness(0.9);
+}
+#day2 article input:checked ~ label span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 45%;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+}
+#day2 article input:checked ~ label span:nth-of-type(2) {
+  transform: rotate(-45deg);
+  top: 45%;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+}
+#day2 article input:checked ~ label span:nth-of-type(3) {
+  transform: rotate(45deg);
+  bottom: 45%;
+  transition: bottom 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+}
+#day2 article label {
+  background-image: linear-gradient(45deg, #6c639e, #77a15f);
+  height: 50%;
+  width: 50%;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10%;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  cursor: pointer;
+}
+#day2 article label:hover {
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.75)) brightness(1.1);
+}
+#day2 article label span {
+  background-color: red;
+  width: 80%;
+  height: 10%;
+  position: absolute;
+  left: 10%;
+  border-radius: 100px;
+}
+#day2 article label span:nth-of-type(1) {
+  top: 10%;
+  transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+}
+#day2 article label span:nth-of-type(2) {
+  top: 45%;
+  transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+}
+#day2 article label span:nth-of-type(3) {
+  bottom: 10%;
+  transition: transform 0.2s ease-in-out, bottom 0.2s ease-in-out 0.2s;
+}#day3 article {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, #000000 50%);
+  position: relative;
+}
+#day3 article .sky {
+  width: 100%;
+  height: 50%;
+  background-color: #87CEEB;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sky 5s linear infinite;
+}
+#day3 article .ground {
+  width: 100%;
+  height: 50%;
+  background-color: tan;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  animation: ground 5s linear infinite;
+}
+#day3 article .sun {
+  width: 15%;
+  height: 15%;
+  background-color: yellow;
+  filter: blur(1.5px);
+  border-radius: 50%;
+  position: absolute;
+  top: 42.5%;
+  left: 10%;
+  z-index: 1;
+  animation: sun 5s linear infinite;
+  transform-origin: 260% 50%;
+}
+#day3 article .left,
+#day3 article .right {
+  border-style: solid;
+  border-width: 50px 0 0 33.3333333333px;
+  border-color: transparent transparent transparent gold;
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 50%;
+  z-index: 3;
+  transform: skewY(-20deg);
+  animation: left 5s linear infinite;
+}
+#day3 article .right {
+  transform: scaleX(-1) translate(100%) skewY(-20deg);
+  z-index: 4;
+  animation: right 5s linear infinite;
+}
+#day3 article .shadow {
+  width: 66.6666666667px;
+  height: 50px;
+  background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+  position: absolute;
+  top: calc(50% + 25px - 5px);
+  left: calc(50% - 33.3333333333px);
+  z-index: 2;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: 0 0;
+  animation: shadow 5s linear infinite;
+}
+#day3 article .frame {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, #77a15f 50%, #6c639e);
+  position: relative;
+  z-index: 99;
+}
+
+@keyframes sun {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shadow {
+  0% {
+    transform: skewX(90deg);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+  50% {
+    transform: skewX(-90deg);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+  100% {
+    transform: skewX(-90deg);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+}
+@keyframes left {
+  0% {
+    filter: brightness(0);
+  }
+  25% {
+    filter: brightness(0.5);
+  }
+  50% {
+    filter: brightness(1);
+  }
+  60% {
+    filter: brightness(0);
+  }
+  100% {
+    filter: brightness(0);
+  }
+}
+@keyframes right {
+  0% {
+    filter: brightness(0);
+  }
+  10% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.5);
+  }
+  60% {
+    filter: brightness(0);
+  }
+  100% {
+    filter: brightness(0);
+  }
+}
+@keyframes frame {
+  0% {
+    filter: brightness(0);
+  }
+  10% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.5);
+  }
+  60% {
+    filter: brightness(0);
+  }
+  100% {
+    filter: brightness(0);
+  }
+}
+@keyframes sky {
+  0% {
+    background-color: #87CEEB;
+  }
+  25% {
+    background-color: #44b1ff;
+  }
+  50% {
+    background-color: #87CEEB;
+  }
+  60% {
+    background-color: #000000;
+  }
+  90% {
+    background-color: #000000;
+  }
+}
+@keyframes ground {
+  0% {
+    background-color: tan;
+  }
+  25% {
+    background-color: #daa157;
+  }
+  50% {
+    background-color: tan;
+  }
+  60% {
+    background-color: #000000;
+  }
+  90% {
+    background-color: #000000;
+  }
+}#day4 article {
+  background-image: linear-gradient(45deg, #77a15f, #6c639e);
+  color: white;
+  position: relative;
+}
+#day4 article div {
+  background-color: white;
+  border-radius: 100px;
+  background-image: radial-gradient(circle, red 0%, blue 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#day4 article div:nth-of-type(1) {
+  animation: grow1 5s linear infinite;
+  background-color: #77a15f;
+}
+#day4 article div:nth-of-type(2) {
+  animation: grow2 5s linear infinite;
+  background-color: #6c639e;
+}
+#day4 article div:nth-of-type(3) {
+  animation: grow3 5s linear infinite;
+  background-color: #77a15f;
+}
+
+@keyframes grow1 {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  20% {
+    width: 0%;
+    height: 0%;
+  }
+  30% {
+    width: 60%;
+    height: 60%;
+  }
+  80% {
+    width: 60%;
+    height: 60%;
+  }
+  90% {
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+  }
+}
+@keyframes grow2 {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  30% {
+    width: 0%;
+    height: 0%;
+  }
+  40% {
+    width: 45%;
+    height: 45%;
+  }
+  70% {
+    width: 45%;
+    height: 45%;
+  }
+  80% {
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+  }
+}
+@keyframes grow3 {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  40% {
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    width: 30%;
+    height: 30%;
+  }
+  60% {
+    width: 30%;
+    height: 30%;
+  }
+  70% {
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+  }
+}#day5 article {
+  background-color: #f5f5f5;
+  background-image: linear-gradient(45deg, #77a15f, #6c639e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#day5 article #main {
+  width: 80%;
+  height: 60%;
+  background-color: white;
+}
+#day5 article #main * {
+  box-sizing: border-box;
+}
+#day5 article #main #header {
+  width: 100%;
+  height: 30%;
+  background-color: #77a15f;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "title revenue" "date amount";
+  padding: 0.25rem;
+}
+#day5 article #main #header span {
+  font-size: 0.5em;
+  color: white;
+}
+#day5 article #main #header span:nth-child(1) {
+  grid-area: title;
+  font-weight: bold;
+}
+#day5 article #main #header span:nth-child(2) {
+  grid-area: date;
+}
+#day5 article #main #header span:nth-child(3) {
+  grid-area: revenue;
+  justify-self: end;
+}
+#day5 article #main #header span:nth-child(4) {
+  grid-area: amount;
+  justify-self: end;
+}
+#day5 article #main #content {
+  width: 100%;
+  height: 70%;
+  background-color: #6c639e;
+  padding: 0.25rem;
+}
+#day5 article #main #content #legend {
+  height: 20%;
+  width: 100%;
+  font-size: 0.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#day5 article #main #content #legend div {
+  margin-left: 0.5rem;
+}
+#day5 article #main #content #legend div span:nth-child(1) {
+  background-color: #77a15f;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.25em;
+}
+#day5 article #main #content #legend div:nth-child(2) span:nth-child(1) {
+  background-color: black;
+}
+#day5 article #main #content #chart {
+  height: 60%;
+  width: 100%;
+  position: relative;
+}
+#day5 article #main #content #chart .graph-line {
+  height: 1px;
+  width: 100%;
+  display: inline-block;
+  background-color: gray;
+  position: absolute;
+}
+#day5 article #main #content #chart .graph-line:nth-of-type(1) {
+  top: 0%;
+}
+#day5 article #main #content #chart .graph-line:nth-of-type(2) {
+  top: 50%;
+}
+#day5 article #main #content #chart .graph-line:nth-of-type(3) {
+  top: 100%;
+}
+#day5 article #main #content #chart .dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+}
+#day5 article #main #content #chart .dot > div {
+  opacity: 0;
+  font-size: 0.5em;
+  transform: translate(2.5px, calc(-100% - 2.5px));
+  background-color: inherit;
+  display: inline-block;
+  padding: 0.25rem;
+}
+#day5 article #main #content #chart .dot:hover > div {
+  opacity: 1;
+}
+#day5 article #main #content #chart .views {
+  background-color: #77a15f;
+}
+#day5 article #main #content #chart #view1 {
+  left: 7.1428571429%;
+}
+#day5 article #main #content #chart #view2 {
+  left: 21.4285714286%;
+}
+#day5 article #main #content #chart #view3 {
+  left: 35.7142857143%;
+}
+#day5 article #main #content #chart #view4 {
+  left: 50%;
+}
+#day5 article #main #content #chart #view5 {
+  left: 64.2857142857%;
+}
+#day5 article #main #content #chart #view6 {
+  left: 78.5714285714%;
+}
+#day5 article #main #content #chart #view7 {
+  left: 92.8571428571%;
+}
+#day5 article #main #content #chart .clicks {
+  background-color: black;
+}
+#day5 article #main #content #chart #click1 {
+  left: 7.1428571429%;
+}
+#day5 article #main #content #chart #click2 {
+  left: 21.4285714286%;
+}
+#day5 article #main #content #chart #click3 {
+  left: 35.7142857143%;
+}
+#day5 article #main #content #chart #click4 {
+  left: 50%;
+}
+#day5 article #main #content #chart #click5 {
+  left: 64.2857142857%;
+}
+#day5 article #main #content #chart #click6 {
+  left: 78.5714285714%;
+}
+#day5 article #main #content #chart #click7 {
+  left: 92.8571428571%;
+}
+#day5 article #main #content #chart svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#day5 article #main #content #axis {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.5em;
+  text-align: center;
+}#day6 article {
+  background-color: green;
+}#day7 article {
+  background-color: green;
+}#day8 article {
+  background-color: green;
+}#day9 article {
+  background-color: green;
+}#day10 article {
+  background-color: green;
+}#day11 article {
+  background-color: green;
+}#day12 article {
+  background-color: green;
+}#day13 article {
+  background-color: green;
+}#day14 article {
+  background-color: green;
+}#day15 article {
+  background-color: green;
+}#day16 article {
+  background-color: green;
+}#day17 article {
+  background-color: green;
+}#day18 article {
+  background-color: green;
+}#day19 article {
+  background-color: green;
+}#day20 article {
+  background-color: green;
+}#day21 article {
+  background-color: green;
+}#day22 article {
+  background-color: green;
+}#day23 article {
+  background-color: green;
+}#day24 article {
+  background-color: green;
+}#day25 article {
+  background-color: green;
+}#day26 article {
+  background-color: green;
+}#day27 article {
+  background-color: green;
+}#day28 article {
+  background-color: green;
+}#day29 article {
+  background-color: green;
+}#day30 article {
+  background-color: green;
+}#day31 article {
+  background-color: green;
+}#day32 article {
+  background-color: green;
+}#day33 article {
+  background-color: green;
+}#day34 article {
+  background-color: green;
+}#day35 article {
+  background-color: green;
+}#day36 article {
+  background-color: green;
+}#day37 article {
+  background-color: green;
+}#day38 article {
+  background-color: green;
+}#day39 article {
+  background-color: green;
+}#day40 article {
+  background-color: green;
+}#day41 article {
+  background-color: green;
+}#day42 article {
+  background-color: green;
+}#day43 article {
+  background-color: green;
+}#day44 article {
+  background-color: green;
+}#day45 article {
+  background-color: green;
+}#day46 article {
+  background-color: green;
+}#day47 article {
+  background-color: green;
+}#day48 article {
+  background-color: green;
+}#day49 article {
+  background-color: green;
+}#day50 article {
+  background-color: green;
+}#day51 article {
+  background-color: green;
+}#day52 article {
+  background-color: green;
+}#day53 article {
+  background-color: green;
+}#day54 article {
+  background-color: green;
+}#day55 article {
+  background-color: green;
+}#day56 article {
+  background-color: green;
+}#day57 article {
+  background-color: green;
+}#day58 article {
+  background-color: green;
+}#day59 article {
+  background-color: green;
+}#day60 article {
+  background-color: green;
+}#day61 article {
+  background-color: green;
+}#day62 article {
+  background-color: green;
+}#day63 article {
+  background-color: green;
+}#day64 article {
+  background-color: green;
+}#day65 article {
+  background-color: green;
+}#day66 article {
+  background-color: green;
+}#day67 article {
+  background-color: green;
+}#day68 article {
+  background-color: green;
+}#day69 article {
+  background-color: green;
+}#day70 article {
+  background-color: green;
+}#day71 article {
+  background-color: green;
+}#day72 article {
+  background-color: green;
+}#day73 article {
+  background-color: green;
+}#day74 article {
+  background-color: green;
+}#day75 article {
+  background-color: green;
+}#day76 article {
+  background-color: green;
+}#day77 article {
+  background-color: green;
+}#day78 article {
+  background-color: green;
+}#day79 article {
+  background-color: green;
+}#day80 article {
+  background-color: green;
+}#day81 article {
+  background-color: green;
+}#day82 article {
+  background-color: green;
+}#day83 article {
+  background-color: green;
+}#day84 article {
+  background-color: green;
+}#day85 article {
+  background-color: green;
+}#day86 article {
+  background-color: green;
+}#day87 article {
+  background-color: green;
+}#day88 article {
+  background-color: green;
+}#day89 article {
+  background-color: green;
+}#day90 article {
+  background-color: green;
+}#day91 article {
+  background-color: green;
+}#day92 article {
+  background-color: green;
+}#day93 article {
+  background-color: green;
+}#day94 article {
+  background-color: green;
+}#day95 article {
+  background-color: green;
+}#day96 article {
+  background-color: green;
+}#day97 article {
+  background-color: green;
+}#day98 article {
+  background-color: green;
+}#day99 article {
+  background-color: green;
+}#day100 article {
+  background-color: green;
+}</style>
+  </head>
+  <body>
+    <header>
+      <h1>100 Days sass</h1>
+      <p>
+        Project built using custom build script to compile html into a single
+        build file. SASS compiled into CSS and injected into main file head
+        style.
+      </p>
+    </header>
+    <main>
+      <section id="day1"><article>
+  <div>100</div>
+  <div>DAYS</div>
+  <div>CSS CHALLENGE</div>
+</article>
+<div><h2>Day #1</h2><p>background-image, color, display, flex-direction, justify-content, align-items, font-size, line-height
+      </p></div></section><section id="day2"><article>
+  <input type="checkbox" id="day2-checkbox" title="Day 2: Checkbox" />
+  <label for="day2-checkbox">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+</article>
+<div><h2>Day #2</h2><p>$line-height, filter, span, transform, top, transition, bottom, height, width, position, cursor, border-radius, border, overflow, background-color, left
+      </p></div></section><section id="day3"><article>
+  <div class='sky'></div>
+  <div class='sun'></div>
+  <div class='ground'></div>
+  <div class='left'></div>
+  <div class='right'></div>
+  <div class='shadow'></div>
+  <div class='frame'></div>
+</article>
+<div><h2>Day #3</h2><p>$animation-duration, animation, z-index, $size, transform-origin, $triangle-size, $triangle-color, $triangle-height, $triangle-width, border-style, border-width, border-color, clip-path, // animation
+      </p></div></section><section id="day4"><article>
+  <div></div>
+  <div></div>
+  <div></div>
+</article>
+<div><h2>Day #4</h2><p>div, $grow1StartGrow, $grow1EndGrow, $grow1StartShrink, $grow1EndShrink, $grow1MaxSize, $grow2StartGrow, $grow2EndGrow, $grow2StartShrink, $grow2EndShrink, $grow2MaxSize, $grow3StartGrow, $grow3EndGrow, $grow3StartShrink, $grow3EndShrink, $grow3MaxSize
+      </p></div></section><section id="day5"><article>
+  <div id="main">
+    <div id="header">
+      <span>WEEKLY REPORT</span>
+      <span id="weekOfYear"></span>
+      <span>Revenue</span>
+      <span>$3621.79</span>
+    </div>
+    <div id="content">
+      <div id="legend">
+        <div>
+          <span></span>
+          <span>Views</span>
+        </div>
+        <div>
+          <span></span>
+          <span>Clicks</span>
+        </div>
+      </div>
+      <div id="chart">
+        <span className="graph-line"></span>
+        <span className="graph-line"></span>
+        <span className="graph-line"></span>
+        <span className="dot views" id="view2"><div></div></span>
+        <span className="dot views" id="view1"><div></div></span>
+        <span className="dot views" id="view3"><div></div></span>
+        <span className="dot views" id="view4"><div></div></span>
+        <span className="dot views" id="view5"><div></div></span>
+        <span className="dot views" id="view6"><div></div></span>
+        <span className="dot views" id="view7"><div></div></span>
+        <span className="dot clicks" id="click1"><div></div></span>
+        <span className="dot clicks" id="click2"><div></div></span>
+        <span className="dot clicks" id="click3"><div></div></span>
+        <span className="dot clicks" id="click4"><div></div></span>
+        <span className="dot clicks" id="click5"><div></div></span>
+        <span className="dot clicks" id="click6"><div></div></span>
+        <span className="dot clicks" id="click7"><div></div></span>
+         <svg id="views"></svg> <svg id="clicks"></svg> 
+      </div>
+      <div id="axis">
+        <span>MON</span>
+        <span>TUE</span>
+        <span>WED</span>
+        <span>THU</span>
+        <span>FRI</span>
+        <span>SAT</span>
+        <span>SUN</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    function getISOWeek(date) {
+      const startOfYear = new Date(date.getFullYear(), 0, 1);
+      const days = Math.floor((date - startOfYear) / (24 * 60 * 60 * 1000));
+      const startOfWeek = startOfYear;
+
+      if (startOfWeek.getDay() !== 4) {
+        // Move to the first Thursday of the year
+        startOfWeek.setDate(1 + ((4 - startOfWeek.getDay() + 7) % 7));
+      }
+
+      const weekNumber = Math.floor((days + startOfWeek.getDay()) / 7) + 1;
+      return weekNumber;
+    }
+
+    const now = new Date();
+    const year = now.getFullYear();
+    const weekNumber = getISOWeek(now);
+
+    function clickAndViewHeightRandomizer() {
+      const views = Math.floor(Math.random() * 1000 + 10);
+      const conversion = 0.1 * Math.random();
+      const clicks = Math.floor(views * conversion);
+
+      const logViews = Math.log(views + 1); // Adding 1 to avoid Math.log(0)
+      const logClicks = Math.log(clicks + 1);
+
+      const viewHeight = (100 * logViews) / Math.log(1001); // log(1001) is the maximum value for views
+      const clickHeight = (100 * logClicks) / Math.log(1001);
+
+      return [views, clicks, viewHeight, clickHeight];
+    }
+
+    const [views1, clicks1, viewHeight1, clickHeight1] =
+      clickAndViewHeightRandomizer();
+    const [views2, clicks2, viewHeight2, clickHeight2] =
+      clickAndViewHeightRandomizer();
+    const [views3, clicks3, viewHeight3, clickHeight3] =
+      clickAndViewHeightRandomizer();
+    const [views4, clicks4, viewHeight4, clickHeight4] =
+      clickAndViewHeightRandomizer();
+    const [views5, clicks5, viewHeight5, clickHeight5] =
+      clickAndViewHeightRandomizer();
+    const [views6, clicks6, viewHeight6, clickHeight6] =
+      clickAndViewHeightRandomizer();
+    const [views7, clicks7, viewHeight7, clickHeight7] =
+      clickAndViewHeightRandomizer();
+
+      document.getElementById("weekOfYear").innerText = `Week ${weekNumber} of ${year}`;
+      document.getElementById("view1").style.height = `${viewHeight1}%`;
+      document.getElementById("view2").style.height = `${viewHeight2}%`;
+      document.getElementById("view3").style.height = `${viewHeight3}%`;
+      document.getElementById("view4").style.height = `${viewHeight4}%`;
+      document.getElementById("view5").style.height = `${viewHeight5}%`;
+      document.getElementById("view6").style.height = `${viewHeight6}%`;
+      document.getElementById("view7").style.height = `${viewHeight7}%`;
+      document.getElementById("click1").style.height = `${clickHeight1}%`;
+      document.getElementById("click2").style.height = `${clickHeight2}%`;
+      document.getElementById("click3").style.height = `${clickHeight3}%`;
+      document.getElementById("click4").style.height = `${clickHeight4}%`;
+      document.getElementById("click5").style.height = `${clickHeight5}%`;
+      document.getElementById("click6").style.height = `${clickHeight6}%`;
+      document.getElementById("click7").style.height = `${clickHeight7}%`;
+
+  </script>
+</article>
+<div><h2>Day #5</h2><p>box-sizing, grid-template-columns, grid-template-rows, grid-template-areas, padding, grid-area, font-weight, justify-self, margin-left, margin-right, opacity, text-align
+      </p></div></section><section id="day6"><article>
+  
+</article>
+<div><h2>Day #6</h2><p>
+      </p></div></section><section id="day7"><article>
+  
+</article>
+<div><h2>Day #7</h2><p>
+      </p></div></section><section id="day8"><article>
+  
+</article>
+<div><h2>Day #8</h2><p>
+      </p></div></section><section id="day9"><article>
+  
+</article>
+<div><h2>Day #9</h2><p>
+      </p></div></section><section id="day10"><article>
+  
+</article>
+<div><h2>Day #10</h2><p>
+      </p></div></section><section id="day11"><article>
+  
+</article>
+<div><h2>Day #11</h2><p>
+      </p></div></section><section id="day12"><article>
+  
+</article>
+<div><h2>Day #12</h2><p>
+      </p></div></section><section id="day13"><article>
+  
+</article>
+<div><h2>Day #13</h2><p>
+      </p></div></section><section id="day14"><article>
+  
+</article>
+<div><h2>Day #14</h2><p>
+      </p></div></section><section id="day15"><article>
+  
+</article>
+<div><h2>Day #15</h2><p>
+      </p></div></section><section id="day16"><article>
+  
+</article>
+<div><h2>Day #16</h2><p>
+      </p></div></section><section id="day17"><article>
+  
+</article>
+<div><h2>Day #17</h2><p>
+      </p></div></section><section id="day18"><article>
+  
+</article>
+<div><h2>Day #18</h2><p>
+      </p></div></section><section id="day19"><article>
+  
+</article>
+<div><h2>Day #19</h2><p>
+      </p></div></section><section id="day20"><article>
+  
+</article>
+<div><h2>Day #20</h2><p>
+      </p></div></section><section id="day21"><article>
+  
+</article>
+<div><h2>Day #21</h2><p>
+      </p></div></section><section id="day22"><article>
+  
+</article>
+<div><h2>Day #22</h2><p>
+      </p></div></section><section id="day23"><article>
+  
+</article>
+<div><h2>Day #23</h2><p>
+      </p></div></section><section id="day24"><article>
+  
+</article>
+<div><h2>Day #24</h2><p>
+      </p></div></section><section id="day25"><article>
+  
+</article>
+<div><h2>Day #25</h2><p>
+      </p></div></section><section id="day26"><article>
+  
+</article>
+<div><h2>Day #26</h2><p>
+      </p></div></section><section id="day27"><article>
+  
+</article>
+<div><h2>Day #27</h2><p>
+      </p></div></section><section id="day28"><article>
+  
+</article>
+<div><h2>Day #28</h2><p>
+      </p></div></section><section id="day29"><article>
+  
+</article>
+<div><h2>Day #29</h2><p>
+      </p></div></section><section id="day30"><article>
+  
+</article>
+<div><h2>Day #30</h2><p>
+      </p></div></section><section id="day31"><article>
+  
+</article>
+<div><h2>Day #31</h2><p>
+      </p></div></section><section id="day32"><article>
+  
+</article>
+<div><h2>Day #32</h2><p>
+      </p></div></section><section id="day33"><article>
+  
+</article>
+<div><h2>Day #33</h2><p>
+      </p></div></section><section id="day34"><article>
+  
+</article>
+<div><h2>Day #34</h2><p>
+      </p></div></section><section id="day35"><article>
+  
+</article>
+<div><h2>Day #35</h2><p>
+      </p></div></section><section id="day36"><article>
+  
+</article>
+<div><h2>Day #36</h2><p>
+      </p></div></section><section id="day37"><article>
+  
+</article>
+<div><h2>Day #37</h2><p>
+      </p></div></section><section id="day38"><article>
+  
+</article>
+<div><h2>Day #38</h2><p>
+      </p></div></section><section id="day39"><article>
+  
+</article>
+<div><h2>Day #39</h2><p>
+      </p></div></section><section id="day40"><article>
+  
+</article>
+<div><h2>Day #40</h2><p>
+      </p></div></section><section id="day41"><article>
+  
+</article>
+<div><h2>Day #41</h2><p>
+      </p></div></section><section id="day42"><article>
+  
+</article>
+<div><h2>Day #42</h2><p>
+      </p></div></section><section id="day43"><article>
+  
+</article>
+<div><h2>Day #43</h2><p>
+      </p></div></section><section id="day44"><article>
+  
+</article>
+<div><h2>Day #44</h2><p>
+      </p></div></section><section id="day45"><article>
+  
+</article>
+<div><h2>Day #45</h2><p>
+      </p></div></section><section id="day46"><article>
+  
+</article>
+<div><h2>Day #46</h2><p>
+      </p></div></section><section id="day47"><article>
+  
+</article>
+<div><h2>Day #47</h2><p>
+      </p></div></section><section id="day48"><article>
+  
+</article>
+<div><h2>Day #48</h2><p>
+      </p></div></section><section id="day49"><article>
+  
+</article>
+<div><h2>Day #49</h2><p>
+      </p></div></section><section id="day50"><article>
+  
+</article>
+<div><h2>Day #50</h2><p>
+      </p></div></section><section id="day51"><article>
+  
+</article>
+<div><h2>Day #51</h2><p>
+      </p></div></section><section id="day52"><article>
+  
+</article>
+<div><h2>Day #52</h2><p>
+      </p></div></section><section id="day53"><article>
+  
+</article>
+<div><h2>Day #53</h2><p>
+      </p></div></section><section id="day54"><article>
+  
+</article>
+<div><h2>Day #54</h2><p>
+      </p></div></section><section id="day55"><article>
+  
+</article>
+<div><h2>Day #55</h2><p>
+      </p></div></section><section id="day56"><article>
+  
+</article>
+<div><h2>Day #56</h2><p>
+      </p></div></section><section id="day57"><article>
+  
+</article>
+<div><h2>Day #57</h2><p>
+      </p></div></section><section id="day58"><article>
+  
+</article>
+<div><h2>Day #58</h2><p>
+      </p></div></section><section id="day59"><article>
+  
+</article>
+<div><h2>Day #59</h2><p>
+      </p></div></section><section id="day60"><article>
+  
+</article>
+<div><h2>Day #60</h2><p>
+      </p></div></section><section id="day61"><article>
+  
+</article>
+<div><h2>Day #61</h2><p>
+      </p></div></section><section id="day62"><article>
+  
+</article>
+<div><h2>Day #62</h2><p>
+      </p></div></section><section id="day63"><article>
+  
+</article>
+<div><h2>Day #63</h2><p>
+      </p></div></section><section id="day64"><article>
+  
+</article>
+<div><h2>Day #64</h2><p>
+      </p></div></section><section id="day65"><article>
+  
+</article>
+<div><h2>Day #65</h2><p>
+      </p></div></section><section id="day66"><article>
+  
+</article>
+<div><h2>Day #66</h2><p>
+      </p></div></section><section id="day67"><article>
+  
+</article>
+<div><h2>Day #67</h2><p>
+      </p></div></section><section id="day68"><article>
+  
+</article>
+<div><h2>Day #68</h2><p>
+      </p></div></section><section id="day69"><article>
+  
+</article>
+<div><h2>Day #69</h2><p>
+      </p></div></section><section id="day70"><article>
+  
+</article>
+<div><h2>Day #70</h2><p>
+      </p></div></section><section id="day71"><article>
+  
+</article>
+<div><h2>Day #71</h2><p>
+      </p></div></section><section id="day72"><article>
+  
+</article>
+<div><h2>Day #72</h2><p>
+      </p></div></section><section id="day73"><article>
+  
+</article>
+<div><h2>Day #73</h2><p>
+      </p></div></section><section id="day74"><article>
+  
+</article>
+<div><h2>Day #74</h2><p>
+      </p></div></section><section id="day75"><article>
+  
+</article>
+<div><h2>Day #75</h2><p>
+      </p></div></section><section id="day76"><article>
+  
+</article>
+<div><h2>Day #76</h2><p>
+      </p></div></section><section id="day77"><article>
+  
+</article>
+<div><h2>Day #77</h2><p>
+      </p></div></section><section id="day78"><article>
+  
+</article>
+<div><h2>Day #78</h2><p>
+      </p></div></section><section id="day79"><article>
+  
+</article>
+<div><h2>Day #79</h2><p>
+      </p></div></section><section id="day80"><article>
+  
+</article>
+<div><h2>Day #80</h2><p>
+      </p></div></section><section id="day81"><article>
+  
+</article>
+<div><h2>Day #81</h2><p>
+      </p></div></section><section id="day82"><article>
+  
+</article>
+<div><h2>Day #82</h2><p>
+      </p></div></section><section id="day83"><article>
+  
+</article>
+<div><h2>Day #83</h2><p>
+      </p></div></section><section id="day84"><article>
+  
+</article>
+<div><h2>Day #84</h2><p>
+      </p></div></section><section id="day85"><article>
+  
+</article>
+<div><h2>Day #85</h2><p>
+      </p></div></section><section id="day86"><article>
+  
+</article>
+<div><h2>Day #86</h2><p>
+      </p></div></section><section id="day87"><article>
+  
+</article>
+<div><h2>Day #87</h2><p>
+      </p></div></section><section id="day88"><article>
+  
+</article>
+<div><h2>Day #88</h2><p>
+      </p></div></section><section id="day89"><article>
+  
+</article>
+<div><h2>Day #89</h2><p>
+      </p></div></section><section id="day90"><article>
+  
+</article>
+<div><h2>Day #90</h2><p>
+      </p></div></section><section id="day91"><article>
+  
+</article>
+<div><h2>Day #91</h2><p>
+      </p></div></section><section id="day92"><article>
+  
+</article>
+<div><h2>Day #92</h2><p>
+      </p></div></section><section id="day93"><article>
+  
+</article>
+<div><h2>Day #93</h2><p>
+      </p></div></section><section id="day94"><article>
+  
+</article>
+<div><h2>Day #94</h2><p>
+      </p></div></section><section id="day95"><article>
+  
+</article>
+<div><h2>Day #95</h2><p>
+      </p></div></section><section id="day96"><article>
+  
+</article>
+<div><h2>Day #96</h2><p>
+      </p></div></section><section id="day97"><article>
+  
+</article>
+<div><h2>Day #97</h2><p>
+      </p></div></section><section id="day98"><article>
+  
+</article>
+<div><h2>Day #98</h2><p>
+      </p></div></section><section id="day99"><article>
+  
+</article>
+<div><h2>Day #99</h2><p>
+      </p></div></section><section id="day100"><article>
+  
+</article>
+<div><h2>Day #100</h2><p>
+      </p></div></section>
+    </main>
+    <table><thead><tr><th>Property</th><th>Used</th></tr></thead><tbody><tr><td>align-content</td><td>false</td></tr><tr><td>align-items</td><td>true</td></tr><tr><td>align-self</td><td>false</td></tr><tr><td>all</td><td>false</td></tr><tr><td>animation</td><td>true</td></tr><tr><td>animation-delay</td><td>false</td></tr><tr><td>animation-direction</td><td>false</td></tr><tr><td>animation-duration</td><td>false</td></tr><tr><td>animation-fill-mode</td><td>false</td></tr><tr><td>animation-iteration-count</td><td>false</td></tr><tr><td>animation-name</td><td>false</td></tr><tr><td>animation-play-state</td><td>false</td></tr><tr><td>animation-timing-function</td><td>false</td></tr><tr><td>backface-visibility</td><td>false</td></tr><tr><td>background</td><td>false</td></tr><tr><td>background-attachment</td><td>false</td></tr><tr><td>background-blend-mode</td><td>false</td></tr><tr><td>background-clip</td><td>false</td></tr><tr><td>background-color</td><td>true</td></tr><tr><td>background-image</td><td>true</td></tr><tr><td>background-origin</td><td>false</td></tr><tr><td>background-position</td><td>false</td></tr><tr><td>background-repeat</td><td>false</td></tr><tr><td>background-size</td><td>false</td></tr><tr><td>border</td><td>true</td></tr><tr><td>border-bottom</td><td>false</td></tr><tr><td>border-bottom-color</td><td>false</td></tr><tr><td>border-bottom-left-radius</td><td>false</td></tr><tr><td>border-bottom-right-radius</td><td>false</td></tr><tr><td>border-bottom-style</td><td>false</td></tr><tr><td>border-bottom-width</td><td>false</td></tr><tr><td>border-collapse</td><td>false</td></tr><tr><td>border-color</td><td>true</td></tr><tr><td>border-image</td><td>false</td></tr><tr><td>border-image-outset</td><td>false</td></tr><tr><td>border-image-repeat</td><td>false</td></tr><tr><td>border-image-slice</td><td>false</td></tr><tr><td>border-image-source</td><td>false</td></tr><tr><td>border-image-width</td><td>false</td></tr><tr><td>border-left</td><td>false</td></tr><tr><td>border-left-color</td><td>false</td></tr><tr><td>border-left-style</td><td>false</td></tr><tr><td>border-left-width</td><td>false</td></tr><tr><td>border-radius</td><td>true</td></tr><tr><td>border-right</td><td>false</td></tr><tr><td>border-right-color</td><td>false</td></tr><tr><td>border-right-style</td><td>false</td></tr><tr><td>border-right-width</td><td>false</td></tr><tr><td>border-spacing</td><td>false</td></tr><tr><td>border-style</td><td>true</td></tr><tr><td>border-top</td><td>false</td></tr><tr><td>border-top-color</td><td>false</td></tr><tr><td>border-top-left-radius</td><td>false</td></tr><tr><td>border-top-right-radius</td><td>false</td></tr><tr><td>border-top-style</td><td>false</td></tr><tr><td>border-top-width</td><td>false</td></tr><tr><td>border-width</td><td>true</td></tr><tr><td>bottom</td><td>true</td></tr><tr><td>box-shadow</td><td>false</td></tr><tr><td>box-sizing</td><td>true</td></tr><tr><td>caption-side</td><td>false</td></tr><tr><td>clear</td><td>false</td></tr><tr><td>clip</td><td>false</td></tr><tr><td>color</td><td>true</td></tr><tr><td>column-count</td><td>false</td></tr><tr><td>column-fill</td><td>false</td></tr><tr><td>column-gap</td><td>false</td></tr><tr><td>column-rule</td><td>false</td></tr><tr><td>column-rule-color</td><td>false</td></tr><tr><td>column-rule-style</td><td>false</td></tr><tr><td>column-rule-width</td><td>false</td></tr><tr><td>column-span</td><td>false</td></tr><tr><td>column-width</td><td>false</td></tr><tr><td>columns</td><td>false</td></tr><tr><td>content</td><td>false</td></tr><tr><td>counter-increment</td><td>false</td></tr><tr><td>counter-reset</td><td>false</td></tr><tr><td>cursor</td><td>true</td></tr><tr><td>direction</td><td>false</td></tr><tr><td>display</td><td>true</td></tr><tr><td>empty-cells</td><td>false</td></tr><tr><td>filter</td><td>true</td></tr><tr><td>flex</td><td>false</td></tr><tr><td>flex-basis</td><td>false</td></tr><tr><td>flex-direction</td><td>true</td></tr><tr><td>flex-flow</td><td>false</td></tr><tr><td>flex-grow</td><td>false</td></tr><tr><td>flex-shrink</td><td>false</td></tr><tr><td>flex-wrap</td><td>false</td></tr><tr><td>float</td><td>false</td></tr><tr><td>font</td><td>false</td></tr><tr><td>font-family</td><td>false</td></tr><tr><td>font-feature-settings</td><td>false</td></tr><tr><td>font-kerning</td><td>false</td></tr><tr><td>font-size</td><td>true</td></tr><tr><td>font-size-adjust</td><td>false</td></tr><tr><td>font-stretch</td><td>false</td></tr><tr><td>font-style</td><td>false</td></tr><tr><td>font-variant</td><td>false</td></tr><tr><td>font-variant-caps</td><td>false</td></tr><tr><td>font-weight</td><td>true</td></tr><tr><td>gap</td><td>false</td></tr><tr><td>grid</td><td>false</td></tr><tr><td>grid-area</td><td>true</td></tr><tr><td>grid-auto-columns</td><td>false</td></tr><tr><td>grid-auto-flow</td><td>false</td></tr><tr><td>grid-auto-rows</td><td>false</td></tr><tr><td>grid-column</td><td>false</td></tr><tr><td>grid-column-end</td><td>false</td></tr><tr><td>grid-column-gap</td><td>false</td></tr><tr><td>grid-column-start</td><td>false</td></tr><tr><td>grid-gap</td><td>false</td></tr><tr><td>grid-row</td><td>false</td></tr><tr><td>grid-row-end</td><td>false</td></tr><tr><td>grid-row-gap</td><td>false</td></tr><tr><td>grid-row-start</td><td>false</td></tr><tr><td>grid-template</td><td>false</td></tr><tr><td>grid-template-areas</td><td>true</td></tr><tr><td>grid-template-columns</td><td>true</td></tr><tr><td>grid-template-rows</td><td>true</td></tr><tr><td>height</td><td>true</td></tr><tr><td>hyphens</td><td>false</td></tr><tr><td>isolation</td><td>false</td></tr><tr><td>justify-content</td><td>true</td></tr><tr><td>left</td><td>true</td></tr><tr><td>letter-spacing</td><td>false</td></tr><tr><td>line-break</td><td>false</td></tr><tr><td>line-height</td><td>true</td></tr><tr><td>list-style</td><td>false</td></tr><tr><td>list-style-image</td><td>false</td></tr><tr><td>list-style-position</td><td>false</td></tr><tr><td>list-style-type</td><td>false</td></tr><tr><td>margin</td><td>false</td></tr><tr><td>margin-bottom</td><td>false</td></tr><tr><td>margin-left</td><td>true</td></tr><tr><td>margin-right</td><td>true</td></tr><tr><td>margin-top</td><td>false</td></tr><tr><td>max-height</td><td>false</td></tr><tr><td>max-width</td><td>false</td></tr><tr><td>min-height</td><td>false</td></tr><tr><td>min-width</td><td>false</td></tr><tr><td>object-fit</td><td>false</td></tr><tr><td>object-position</td><td>false</td></tr><tr><td>opacity</td><td>true</td></tr><tr><td>order</td><td>false</td></tr><tr><td>outline</td><td>false</td></tr><tr><td>outline-color</td><td>false</td></tr><tr><td>outline-offset</td><td>false</td></tr><tr><td>outline-style</td><td>false</td></tr><tr><td>outline-width</td><td>false</td></tr><tr><td>overflow</td><td>true</td></tr><tr><td>overflow-wrap</td><td>false</td></tr><tr><td>overflow-x</td><td>false</td></tr><tr><td>overflow-y</td><td>false</td></tr><tr><td>padding</td><td>true</td></tr><tr><td>padding-bottom</td><td>false</td></tr><tr><td>padding-left</td><td>false</td></tr><tr><td>padding-right</td><td>false</td></tr><tr><td>padding-top</td><td>false</td></tr><tr><td>page-break-after</td><td>false</td></tr><tr><td>page-break-before</td><td>false</td></tr><tr><td>page-break-inside</td><td>false</td></tr><tr><td>perspective</td><td>false</td></tr><tr><td>perspective-origin</td><td>false</td></tr><tr><td>place-content</td><td>false</td></tr><tr><td>place-items</td><td>false</td></tr><tr><td>place-self</td><td>false</td></tr><tr><td>pointer-events</td><td>false</td></tr><tr><td>position</td><td>true</td></tr><tr><td>quotes</td><td>false</td></tr><tr><td>resize</td><td>false</td></tr><tr><td>right</td><td>false</td></tr><tr><td>row-gap</td><td>false</td></tr><tr><td>scroll-behavior</td><td>false</td></tr><tr><td>tab-size</td><td>false</td></tr><tr><td>table-layout</td><td>false</td></tr><tr><td>text-align</td><td>true</td></tr><tr><td>text-align-last</td><td>false</td></tr><tr><td>text-decoration</td><td>false</td></tr><tr><td>text-decoration-color</td><td>false</td></tr><tr><td>text-decoration-line</td><td>false</td></tr><tr><td>text-decoration-style</td><td>false</td></tr><tr><td>text-indent</td><td>false</td></tr><tr><td>text-justify</td><td>false</td></tr><tr><td>text-overflow</td><td>false</td></tr><tr><td>text-shadow</td><td>false</td></tr><tr><td>text-transform</td><td>false</td></tr><tr><td>top</td><td>true</td></tr><tr><td>transform</td><td>true</td></tr><tr><td>transform-origin</td><td>true</td></tr><tr><td>transition</td><td>true</td></tr><tr><td>transition-delay</td><td>false</td></tr><tr><td>transition-duration</td><td>false</td></tr><tr><td>transition-property</td><td>false</td></tr><tr><td>transition-timing-function</td><td>false</td></tr><tr><td>unicode-bidi</td><td>false</td></tr><tr><td>vertical-align</td><td>false</td></tr><tr><td>visibility</td><td>false</td></tr><tr><td>white-space</td><td>false</td></tr><tr><td>width</td><td>true</td></tr><tr><td>word-break</td><td>false</td></tr><tr><td>word-spacing</td><td>false</td></tr><tr><td>z-index</td><td>true</td></tr><tr><td>$line-height</td><td>true</td></tr><tr><td>span</td><td>true</td></tr><tr><td>$animation-duration</td><td>true</td></tr><tr><td>$size</td><td>true</td></tr><tr><td>$triangle-size</td><td>true</td></tr><tr><td>$triangle-color</td><td>true</td></tr><tr><td>$triangle-height</td><td>true</td></tr><tr><td>$triangle-width</td><td>true</td></tr><tr><td>clip-path</td><td>true</td></tr><tr><td>// animation</td><td>true</td></tr><tr><td>div</td><td>true</td></tr><tr><td>$grow1StartGrow</td><td>true</td></tr><tr><td>$grow1EndGrow</td><td>true</td></tr><tr><td>$grow1StartShrink</td><td>true</td></tr><tr><td>$grow1EndShrink</td><td>true</td></tr><tr><td>$grow1MaxSize</td><td>true</td></tr><tr><td>$grow2StartGrow</td><td>true</td></tr><tr><td>$grow2EndGrow</td><td>true</td></tr><tr><td>$grow2StartShrink</td><td>true</td></tr><tr><td>$grow2EndShrink</td><td>true</td></tr><tr><td>$grow2MaxSize</td><td>true</td></tr><tr><td>$grow3StartGrow</td><td>true</td></tr><tr><td>$grow3EndGrow</td><td>true</td></tr><tr><td>$grow3StartShrink</td><td>true</td></tr><tr><td>$grow3EndShrink</td><td>true</td></tr><tr><td>$grow3MaxSize</td><td>true</td></tr><tr><td>justify-self</td><td>true</td></tr><tr><td>* box-sizing</td><td>true</td></tr></tbody></table>
+    <footer>
+      <p>Created by TrevMcDev</p>
+    </footer>
+  </body>
+</html>

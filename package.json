@@ -1,0 +1,12 @@
+{
+  "name": "100-days-sass",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "watch": "set NODE_OPTIONS=--no-deprecation && node watch.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.83.4"
+  }
+}
